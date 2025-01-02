@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LearnEnglish</title>
+  <title>LearnDeutsch</title>
   <style>
     body {
   margin: 0;
@@ -280,20 +280,22 @@ margin: 0;
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background-color: red;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url('https://png.pngtree.com/png-vector/20240407/ourmid/pngtree-wrong-sign-incorrect-symbol-vector-png-image_12267047.png');
+  background-size: contain;
   
 }
 #rightAnswer{
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background-color: green;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url("https://cdn.pixabay.com/photo/2013/07/13/10/06/affirmative-156538_640.png");
+  background-size: contain;
  
 }
 #theEnd{
@@ -374,10 +376,10 @@ margin: 0;
 
 
 <div id="RightContainer">
-  <div id="rightAnswer">RIGHT ANSWER</div>
+  <div id="rightAnswer"></div>
 </div>
 <div id="WrongContainer">
-  <div id="wrongAnswer">WRONG ANSWER</div>
+  <div id="wrongAnswer"></div>
 </div>
 
 <div id="revew"></div>
@@ -387,6 +389,14 @@ margin: 0;
 <div id="theEnd"></div>
 <script>
 const answerdata = {
+85: "entspannen",
+84: "vermissen",
+83: "meer",
+82: "kaum",
+81: "backen",
+80: "ofen",
+79: "shieben",
+78: "wurfel",
 77: "pizzateig",
 76: "zum schluss",
 75: "danach",
@@ -556,7 +566,7 @@ let stopNumber = 4;
 let videoNumb = 65
 let right = 0;
 let turn = 1;
-let videoSequence = [1,2,3,4,5,6,7,8,9,10,11];
+let videoSequence = [];
 
 
 let finish = 0;

@@ -414,16 +414,16 @@ const answerdata = {
 // 129: "aufenthaltserlaubnis",
 // 128: "bewegen",
 // 127: "salbe",
-// 126: "behandlungsraum",
-// 125: "krankenversicherung",
-// 124: "versichertenkarte",
-// 123: "praxis",
-// 122: "rontgen",
-// 121: "auftreten",
-// 120: "kuhlen",
+ 126: "behandlungsraum",
+ 125: "krankenversicherung",
+ 124: "versichertenkarte",
+ 123: "praxis",
+ 122: "rontgen",
+ 121: "auftreten",
+ 120: "kuhlen",
  119: "bein",
  118: "ab",
- 117: "I'm focused",
+ 117: "i'm focused",
  116: "ernahrung",
  115: "trotzdem",
  114: "ausruhen",
@@ -633,6 +633,7 @@ let videoNumb = 65
 let right = 0;
 let turn = 1;
 let videoSequence = [];
+let afirmations = [9,11,67,69,117];
 
 
 let finish = 0;
@@ -1007,7 +1008,8 @@ input.addEventListener('keypress', event => {
                     
                     if (videoSequence.length > 0) {
                       videoPlayer.style.zIndex = "3"
-                      playVideosSequentially(videoSequence);
+                      const comi = [...videoSequence, ...afirmations];
+                      playVideosSequentially(comi);
                     } else {
                       theEnd.style.zIndex = "4"
                     }
@@ -1085,7 +1087,7 @@ input.addEventListener('keypress', event => {
 
             function addUniqueNumber(array, number) {
               if (!array.includes(number)) {
-                array.push(number);
+                array.unshift(number);
               }
             }
             addUniqueNumber(videoSequence , aa[aa.length-2] )
